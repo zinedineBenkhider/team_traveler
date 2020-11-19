@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout_new_housing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.transport.DetailTransportActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/detail_transport_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        tools:context=".presentation.activities.ListActivitiesActivity">
+        <ImageButton
+            android:id="@+id/backButton_detail_transport"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+            android:background="#00FFFFFF"
+
+            app:srcCompat="@drawable/ic_chevron" />
+        <TextView
+            android:id="@+id/name_trip_detail_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"
+            tools:text="Super Voyage"
+            android:layout_marginRight="64dp"
+            android:textSize="25dp"
+            >
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/title_detail_transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Transport"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_progress_bar_detail_transport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar_detail_trip"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/LinearLayoutDetailTransport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        tools:context=".presentation.activities.DetailActivitiesActivity">
+
+        <TextView
+            android:id="@+id/title_participants_detail_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:text="Participants:"
+            android:textCursorDrawable="@color/colorCursorTextView"
+            android:textSize="18dp">
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_particpants_detail_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".presentation.transport.DetailTransportActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/name_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_text_fields_detail_housing"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:enabled="false"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/type_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/type_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Type"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textColor="@color/color_text_fields_detail_housing"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/departure_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/location_departure_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Lieu de depart"
+                android:inputType="textPersonName"
+                android:enabled="false"
+                android:textColor="@color/color_text_fields_detail_housing"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reach_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+        <EditText
+            android:id="@+id/location_reach_transport_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:hint="Lieu d'arrivé"
+            android:enabled="false"
+            android:inputType="textCapWords"
+            android:textColor="@color/color_text_fields_detail_housing" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_departure_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <EditText
+                android:id="@+id/date_departure_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Date"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textColor="@color/color_text_fields_detail_housing" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/time_departure_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <EditText
+                android:id="@+id/time_departure_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Heure de départ"
+                android:inputType="textPersonName"
+                android:textColor="@color/color_text_fields_detail_housing" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/time_reach_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <EditText
+                android:id="@+id/time_reach_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Heure d'arrivé"
+                android:inputType="textPersonName"
+                android:textColor="@color/color_text_fields_detail_housing" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/join_exit_detail_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rejoindre ce Transport"
+            android:layout_marginBottom="20dp"
+
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

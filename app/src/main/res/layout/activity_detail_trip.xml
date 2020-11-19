@@ -1,0 +1,226 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout_detail_trip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.trip.DetailTripActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_detail_trip"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_progress_bar_detail_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar_detail_trip"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout_content_detail_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/name_trip_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Super Voyage"
+                android:textSize="25dp"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.529"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date_trip_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.058"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_trip_detail"
+                tools:text="Du 12/01/2020 au 20/01/2020" />
+
+            <TextView
+                android:id="@+id/place_trip_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text="A Lisbon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_trip_detail" />
+
+            <TextView
+                android:id="@+id/nb_participants_trip_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_trip_detail"
+                tools:text="5 participant(s)" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_particpants_detail_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nb_participants_trip_detail" />
+            <LinearLayout
+                android:id="@+id/LinearLayout_btn_housings_detail_trip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_particpants_detail_trip"
+                >
+
+                <ImageButton
+                    android:id="@+id/btn_show_some_housing_trip_detail"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/colorstandard"
+                    android:ellipsize="none"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_expand_more"
+                    android:textColor="@android:color/white"></ImageButton>
+
+                <Button
+                    android:id="@+id/btn_housing_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/colorstandard"
+                    android:ellipsize="none"
+                    android:text="Logement"
+                    android:textColor="@android:color/white">
+
+
+                </Button>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_housings_detail_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LinearLayout_btn_housings_detail_trip" />
+
+            <Button
+                android:id="@+id/btn_transport_detail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorstandard"
+                android:ellipsize="none"
+                android:text="Transport"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LinearLayout_btn_housings_detail_trip" />
+
+
+            <Button
+                android:id="@+id/btn_activity_detail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorstandard"
+                android:ellipsize="none"
+                android:text="Activité"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_transport_detail" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/name_trip_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/name_trip_detail"
+                app:srcCompat="@drawable/ic_chevron" />
+
+            <ImageButton
+                android:id="@+id/btn_edit_detail_trip"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@android:color/transparent"
+                android:tag="edit"
+                app:layout_constraintBottom_toBottomOf="@+id/backButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backButton"
+                app:srcCompat="@drawable/ic_edit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

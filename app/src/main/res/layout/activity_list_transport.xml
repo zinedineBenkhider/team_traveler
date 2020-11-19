@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.transport.ListTransportActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_list_transport"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageButton
+            android:id="@+id/backButton_list_transport"
+            android:layout_width="48dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/name_trip_list_transport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_trip_list_transport"
+            app:srcCompat="@drawable/ic_chevron" />
+
+        <TextView
+            android:id="@+id/name_trip_list_transport"
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Super Voyage"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_list_supprimer_transport"
+            app:layout_constraintStart_toEndOf="@+id/backButton_list_transport"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <ImageButton
+            android:id="@+id/btn_list_supprimer_transport"
+            android:layout_width="46dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/name_trip_list_transport"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/title_list_transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Transports"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        >
+    </TextView>
+    <ProgressBar
+        android:id="@+id/progress_bar_list_transport"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        />
+    <!--        android:textColor="@color/color_nme_app_connexion"-->
+
+    <TextView
+        android:id="@+id/no_transport_yet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:visibility="gone"
+        android:text="@string/no_transport_yet" />
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_list_transport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+
+            />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_new_transport_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_add_circle" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

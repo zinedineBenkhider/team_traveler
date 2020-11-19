@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.activities.ListActivitiesActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/list_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        tools:context=".presentation.activities.ListActivitiesActivity">
+        <ImageButton
+            android:id="@+id/backButton_list_activity"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_chevron" />
+        <TextView
+            android:id="@+id/name_trip_list_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="Super Voyage"
+            android:layout_marginRight="64dp"
+            android:textSize="25dp"
+            >
+        </TextView>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/title_list_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Activités"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="18dp"
+        >
+    </TextView>
+    <ProgressBar
+        android:id="@+id/progress_bar_top_activity"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        />
+
+    <TextView
+        android:id="@+id/no_activity_yet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:visibility="gone"
+        android:text="@string/no_activity_yet" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.activities.ListActivitiesActivity">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="34dp"
+            />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_new_activity_list_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_add_circle" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_buttom_activity"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center|bottom"
+
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

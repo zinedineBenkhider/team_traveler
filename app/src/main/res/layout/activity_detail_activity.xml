@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout_new_housing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.activities.DetailActivitiesActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/detail_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        tools:context=".presentation.activities.DetailActivitiesActivity">
+        <ImageButton
+            android:id="@+id/backButton_detail_activity"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_chevron" />
+        <TextView
+            android:id="@+id/name_trip_detail_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            tools:text="Super Voyage"
+            android:layout_marginRight="64dp"
+            android:textSize="25dp"
+            >
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/title_detail_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Activité"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        >
+    </TextView>
+    <LinearLayout
+        android:id="@+id/LinearLayout_progress_bar_detail_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar_detail_activity"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/LinearLayout_content_detail_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="30dp"
+        tools:context=".presentation.activities.DetailActivitiesActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_marginBottom="30dp"
+        tools:context=".presentation.activities.DetailActivitiesActivity">
+
+    <TextView
+        android:id="@+id/title_participants_detail_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorButtomLineTextView"
+        android:text="Avis:"
+        android:textCursorDrawable="@color/colorCursorTextView"
+        android:textSize="18dp">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_particpants_detail_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+
+            tools:context=".presentation.activities.DetailActivitiesActivity">
+        <TextView
+            android:id="@+id/title_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:text="Proposée par: "
+            android:textCursorDrawable="@color/colorCursorTextView"
+            android:textSize="18dp">
+        </TextView>
+            <TextView
+                android:id="@+id/name_user_owner_activity_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                tools:text="Personne"
+                android:textCursorDrawable="@color/colorCursorTextView"
+                android:textSize="18dp">
+        </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/entitled_activity_detail_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleTint="#FF5722"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:id="@+id/entitled_activity_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:backgroundTint="@color/colorButtomLineTextView"
+                    android:ems="10"
+                    android:hint="Intitulé"
+                    android:inputType="textPersonName"
+                    android:enabled="false"
+                    android:textColor="@color/color_text_fields_detail_housing"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/type_activity_detail_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false">
+
+        <EditText
+            android:id="@+id/type_activity_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:hint="Type"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:textColor="@color/color_text_fields_detail_housing"
+
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/price_form_activity_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        >
+
+            <EditText
+                android:id="@+id/price_activity_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Prix"
+                android:enabled="false"
+                android:textColor="@color/color_text_fields_detail_housing"
+                android:inputType="textPersonName"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/location_form_activity_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <EditText
+                android:id="@+id/location_activity_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:enabled="false"
+                android:textColor="@color/color_text_fields_detail_housing"
+                android:hint="Lieu"
+                android:inputType="textCapWords"
+               />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/web_site_form_activity_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:linksClickable="true"
+                android:autoLink="web|email"
+                >
+
+                <EditText
+                    android:id="@+id/web_site_activity_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:editable="false"
+                    android:backgroundTint="@color/colorButtomLineTextView"
+                    android:ems="10"
+                    android:linksClickable="true"
+                    android:autoLink="web"
+                    android:textColor="@color/color_text_fields_detail_housing"
+                    android:hint="Site web"
+                    android:textIsSelectable="true"
+
+                    android:textCursorDrawable="@color/colorCursorTextView"
+                    tools:ignore="Deprecated" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_interested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@color/color_chip_without_opinion"
+                android:textColor="@color/color_chip_text"
+
+                android:text="@string/opinion_interested">
+            </com.google.android.material.chip.Chip>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_participate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@color/color_chip_without_opinion"
+                android:textColor="@color/color_chip_text"
+                android:text="@string/opinion_participate">
+            </com.google.android.material.chip.Chip>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_not_participate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@color/color_chip_without_opinion"
+                android:textColor="@color/color_chip_text"
+                android:text="@string/opinion_not_participate">
+            </com.google.android.material.chip.Chip>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

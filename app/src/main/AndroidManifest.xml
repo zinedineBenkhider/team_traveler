@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.teamtraveler">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".presentation.trip.ListTripActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.trip.DetailTripActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http"
+                    android:host="team.traveler.com"
+                    android:pathPattern="/..*"
+                    />
+            </intent-filter>
+
+
+
+        </activity>
+        <activity
+            android:name=".presentation.trip.NewTripActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".presentation.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".presentation.signUp.signUpActivity"></activity>
+
+
+
+        <activity
+            android:name=".presentation.housing.NewHousingActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:label="TeamTraveler (Logement)">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="text/plain" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".presentation.housing.ListHousingActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.housing.DetailHousingActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".presentation.housing.EditHousingActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".presentation.activities.NewActivitiesActivity"
+
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter android:label="TeamTraveler (Activité)">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".presentation.activities.ListActivitiesActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.activities.DetailActivitiesActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.transport.NewTransportActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.transport.ListTransportActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.login.ResetPasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".presentation.transport.DetailTransportActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

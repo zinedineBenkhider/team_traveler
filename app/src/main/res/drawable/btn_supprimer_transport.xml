@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_btn_supprimer_transport">
+    </item>
+    <item
+        android:drawable="@drawable/ic_delete"
+        android:gravity="center">
+    </item>
+</layer-list>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".presentation.signUp.signUpActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="60dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/button_back_signUp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_cancel" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Inscription"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_marginRight="64dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_identifiant_register_wrapper"
+        android:layout_width="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/user_identifiant_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Nom d'utilisateur"
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_email_register_wrapper"
+        android:layout_width="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/user_email_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_password_register_wrapper"
+        android:layout_width="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/user_password_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+
+        android:hint="Mot de passe"
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_confirmation_password_register_wrapper"
+        android:layout_width="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/user_confirmation_password_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:hint="Confirmation du mot de passe"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="48dp"
+
+        android:text="@string/text_sign_up_btn"
+        android:padding="15dp"
+        />
+
+
+
+</LinearLayout>

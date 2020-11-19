@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#D37F04</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorstandard">#E0E89B0F</color>
+    <color name="colorButtomLineTextView">#FF9800</color>
+    <color name="colorCursorTextView">#000000</color>
+    <color name="color_btn_create_ship">#FF9800</color>
+    <color name="color_icon_profile">#9D6E19</color>
+    <color name="color_icon_participant">#9D6E19</color>
+    <color name="color_stroke_email_psw_connexion">#9D6E19</color>
+    <color name="color_icon_lock_password">#9D6E19</color>
+    <color name="color_icon_lock_open_password">#9D6E19</color>
+    <color name="color_nme_app_connexion">#FF9800</color>
+    <color name="color_check_box_housing">#FF9800</color>
+    <color name="color_control_normal_rating_bar">#9D6E19</color>
+    <color name="color_control_actived_rating_bar">#EFD807</color>
+    <color name="color_text_fields_detail_housing">#202020</color>
+    <color name="color_text_fields_value_detail_housing">#000000</color>
+    <color name="color_text_btn_sort_housings">#FFFFFF</color>
+    <color name="color_bg_btn_sort_clicked_housing">#9D6E19</color>
+    <color name="color_bg_btn_sort_not_clicked_housing">#FF9800</color>
+    <color name="color_chip_interested">#00bcd4</color>
+    <color name="color_chip_participate">#4caf50</color>
+    <color name="color_chip_not_participate">#ff3d00</color>
+    <color name="color_chip_without_opinion">#7E8181</color>
+    <color name="color_chip_text">#FFFFFF</color>
+    <color name="color_for_transport_participant">#64A3BB</color>
+    <color name="color_for_chip_background">#64A3BB</color>
+    <color name="color_backgroud_card_transport_item">#C4C7CA</color>
+    <color name="color_participer_transport">#FF9800</color>
+    <color name="color_quitter_transport">#FF0E00</color>
+    <color name="color_quitter_voyage">#E4C41006</color>
+    <color name="color_supprimer_activity">#E4C41006</color>
+    <color name="color_background_cardview">#FAD6A0</color>
+    <color name="color_chip_participants_detail_trip">#00bcd4</color>
+    <color name="color_icon_notification">#FF6702</color>
+    <color name="color_icons_activity">#727272</color>
+    <color name="color_backgroud_card_transport_item_when_deleting">#aba8a8</color>
+    <color name="color_backgroud_card_transport">#ffffff</color>
+
+
+</resources>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".presentation.housing.EditHousingActivity">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/backButton_housing_detail"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_cancel" />
+    <TextView
+        android:id="@+id/name_trip_edit_housing"
+        android:layout_marginRight="64dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:backgroundTint="@color/colorButtomLineTextView"
+        android:text="Super voyage"
+        android:textCursorDrawable="@color/colorCursorTextView"
+        android:textSize="25dp">
+    </TextView>
+
+
+</LinearLayout>
+    <TextView
+        android:id="@+id/title_edit_housing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/logement_title_detail_housing"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textSize="18dp">
+    </TextView>
+    <LinearLayout
+        android:id="@+id/LinearLayout_progress_bar_edit_housing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar_edit_housing"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+<LinearLayout
+    android:id="@+id/LinearLayout_edit_housing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".presentation.housing.EditHousingActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".presentation.housing.DetailHousingActivity">
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating_bar_note_housing_detail"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="152dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:minHeight="10dp"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/note_housing_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:text="Note"
+            android:textColor="@color/colorCursorTextView"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+
+
+    <!--   android:inputType="textCapWords"-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_form_edit_housing_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:passwordToggleTint="#FF5722"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <EditText
+            android:id="@+id/name_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/price_form_edit_housing_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <EditText
+            android:id="@+id/price_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:hint="Prix"
+            android:inputType="number"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nb_room_form_edit_housing_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <EditText
+            android:id="@+id/nb_room_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Nombre de chambre"
+            android:textCursorDrawable="@color/colorCursorTextView"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nb_bathroom_form_housing_edit_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <EditText
+            android:id="@+id/nb_bathroom_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Nombre de douche"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nb_bed_form_housing_edit_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <EditText
+            android:id="@+id/nb_bed_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:hint="Nombre de lit"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        tools:context=".presentation.housing.EditHousingActivity">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp"
+            tools:context=".presentation.housing.NewHousingActivity">
+            <CheckBox
+                android:id="@+id/checkbox_wifi_edit_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/color_check_box_housing"
+                android:text="Wi-Fi"/>
+            <CheckBox
+                android:id="@+id/checkbox_swimming_pool_edit_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/color_check_box_housing"
+                android:text="Piscine"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp"
+            tools:context=".presentation.housing.EditHousingActivity">
+            <CheckBox
+                android:id="@+id/checkbox_gardin_edit_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/color_check_box_housing"
+                android:text="Jardin"/>
+            <CheckBox
+                android:id="@+id/checkbox_garage_edit_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/color_check_box_housing"
+                android:text="Garage"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".presentation.housing.EditHousingActivity">
+            <CheckBox
+                android:id="@+id/checkbox_chicken_edit_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/color_check_box_housing"
+                android:text="Cuisine"/>
+            <CheckBox
+                android:id="@+id/checkbox_climatisation_edit_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/color_check_box_housing"
+                android:text="Climatisation"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description_form_edit_housing_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="80"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <EditText
+            android:id="@+id/others_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:hint="Autres"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/link_form_edit_housing_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <EditText
+            android:id="@+id/link_form_edit_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:hint="Lien"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        tools:context=".presentation.housing.DetailHousingActivity">
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating_bar_average_housing_edit"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="152dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:minHeight="10dp"
+            android:layout_gravity="center"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/average_housing_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorCursorTextView"
+            android:text="Moyenne"
+
+            android:textSize="12dp"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+    </LinearLayout>
+    <!--  Site pour créer des boutons:  https://angrytools.com/android/button/-->
+    <Button
+        android:id="@+id/btn_save_form_edit_housing"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_create_new_trip"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Enregistrer"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

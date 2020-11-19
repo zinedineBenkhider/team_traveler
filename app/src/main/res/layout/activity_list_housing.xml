@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.housing.ListHousingActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/list_housing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        tools:context=".presentation.transport.ListTransportActivity">
+        <ImageButton
+            android:id="@+id/backButton_list_housing"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_chevron" />
+        <TextView
+            android:id="@+id/name_trip_list_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Super Voyage"
+            android:layout_marginRight="64dp"
+            android:textSize="25dp"
+            >
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/title_list_housing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Logements"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_sort_list_housing"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        tools:context=".presentation.housing.NewHousingActivity"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/sort_housing_by"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_sort_note_housing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_sort_housings_not_clicked"
+            android:text="@string/txt_btn_sort_by_range"
+            android:textColor="@color/color_text_btn_sort_housings"
+            app:buttonTint="@color/color_check_box_housing" />
+
+        <Button
+            android:id="@+id/btn_sort_price_housing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/btn_sort_housings_not_clicked"
+
+            android:text="@string/txt_btn_sort_by_price"
+            android:textColor="@color/color_text_btn_sort_housings" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar_housing"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <TextView
+        android:id="@+id/no_housing_yet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:visibility="gone"
+        android:text="@string/no_housing_yet" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.housing.ListHousingActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_housing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+
+        />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_new_housing_list_housings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_add_circle" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

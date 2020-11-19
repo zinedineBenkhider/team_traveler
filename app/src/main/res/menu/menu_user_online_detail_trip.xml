@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.teamtraveler.presentation">
+
+
+    <item
+        android:icon="@drawable/profile_with_text_white"
+        android:title="profile"
+        app:showAsAction="always"
+        android:id="@+id/action_profil"
+        />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_log_off"
+        android:orderInCategory="81"
+        android:title="@string/action_log_off"
+        app:showAsAction="never" />
+
+</menu>

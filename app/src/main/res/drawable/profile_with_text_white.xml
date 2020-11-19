@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_person_white"
+        android:gravity="top|center">
+    </item>
+    <item
+        android:drawable="@drawable/circle_online"
+        android:gravity="bottom|right"
+        android:right="2dp"
+        android:width="8dp"
+        android:height="8dp">
+    </item>
+</layer-list>

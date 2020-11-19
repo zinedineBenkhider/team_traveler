@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:paddingLeft="5dp"
+        android:layout_margin="6dp">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView_note"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_housing_item"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:paddingTop="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Villa " />
+
+        <TextView
+            android:id="@+id/range_housing_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView_medal"
+            app:layout_constraintTop_toTopOf="@id/imageView_medal"
+            app:layout_constraintEnd_toStartOf="@id/range_housing_item_suffixe"
+            app:layout_constraintBottom_toBottomOf="@id/imageView_medal"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/range_housing_item_suffixe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toEndOf="@id/range_housing_item"
+            app:layout_constraintTop_toTopOf="@id/range_housing_item"
+            tools:text="er" />
+
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating_bar_housing_item"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="53dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:maxHeight="10dp"
+            android:layout_gravity="center"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView_medal" />
+
+        <TextView
+            android:id="@+id/price_housing_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="220$/nuit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/name_housing_item"
+            app:layout_constraintTop_toBottomOf="@+id/name_housing_item"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="3,7"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/rating_bar_housing_item"
+            app:layout_constraintTop_toTopOf="@id/rating_bar_housing_item"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar_housing_item"/>
+
+        <ImageView
+            android:id="@+id/imageView_medal"
+            android:layout_width="34dp"
+            android:layout_height="33dp"
+            tools:src="@drawable/gold_medal"
+            app:layout_constraintBottom_toTopOf="@id/rating_bar_housing_item"
+            app:layout_constraintStart_toStartOf="@id/rating_bar_housing_item"
+            app:layout_constraintEnd_toStartOf="@id/range_housing_item"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.166" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

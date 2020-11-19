@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_transport"
+    android:layout_width="160dp"
+    android:layout_height="210dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <ImageButton
+            android:id="@+id/imageButton_supprimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/btn_supprimer_transport" />
+
+        <ImageButton
+            android:id="@+id/image_button_transport"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_participer_transport"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_type_list_transport"
+            android:layout_width="26dp"
+            android:layout_height="25dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/name_creator_list_transport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_creator_list_transport"
+            app:srcCompat="@drawable/ic_directions_car_darkgrey_24dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_creator_list_transport" />
+
+        <TextView
+            android:id="@+id/name_creator_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounder_corner_transport_org_name"
+            android:padding="3dp"
+            android:text="Camille"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/departure_location_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:text="Départ: Lille" />
+
+        <TextView
+            android:id="@+id/reach_location_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="48dp"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:text="Arrivé: Bruxelles" />
+
+        <TextView
+            android:id="@+id/date_departure_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_button_transport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Le 15/07/2020" />
+
+        <TextView
+            android:id="@+id/time_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_button_transport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="14:00->16:30" />
+
+        <TextView
+            android:id="@+id/join_exit_txt_list_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Rejoindre ce transport"
+            app:layout_constraintBottom_toBottomOf="@+id/image_button_transport"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="@id/image_button_transport"
+            app:layout_constraintTop_toTopOf="@+id/image_button_transport" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

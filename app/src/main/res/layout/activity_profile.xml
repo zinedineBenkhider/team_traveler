@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_cardview"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="341dp"
+        android:layout_height="457dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutProfileCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageButton
+                android:id="@+id/btn_edit_email_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#ffffff"
+                android:tag="edit"
+                app:layout_constraintBottom_toBottomOf="@+id/email_field_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/email_field_profile"
+                app:layout_constraintTop_toTopOf="@+id/email_field_profile"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="123dp"
+                android:layout_height="97dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_person" />
+
+            <TextView
+                android:id="@+id/name_field_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:text="guest" />
+
+            <TextView
+                android:id="@+id/email_form_profile"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Email :"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/name_field_profile"
+                app:layout_constraintHorizontal_bias="0.274"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_field_profile" />
+
+            <TextView
+                android:id="@+id/password_form_profile"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Mot de passe :"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/email_form_profile"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/email_form_profile"
+                app:layout_constraintTop_toBottomOf="@+id/email_field_profile" />
+
+            <TextView
+                android:id="@+id/email_field_profile"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.163"
+                app:layout_constraintStart_toStartOf="@+id/email_form_profile"
+                app:layout_constraintTop_toBottomOf="@+id/email_form_profile"
+                tools:text="guest@domaine.fr" />
+
+            <TextView
+                android:id="@+id/password_field_profile"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="******"
+                app:layout_constraintStart_toStartOf="@+id/email_field_profile"
+                app:layout_constraintTop_toBottomOf="@+id/password_form_profile" />
+
+            <ImageButton
+                android:id="@+id/btn_edit_username_profile"
+                android:tag="edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#ffffff"
+                app:layout_constraintBottom_toBottomOf="@+id/name_field_profile"
+                app:layout_constraintEnd_toEndOf="@+id/btn_edit_email_profile"
+                app:layout_constraintHorizontal_bias="0.632"
+                app:layout_constraintStart_toStartOf="@+id/btn_edit_email_profile"
+                app:layout_constraintTop_toTopOf="@+id/name_field_profile"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageButton
+                android:id="@+id/btn_edit_pass_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#ffffff"
+                android:tag="edit"
+                app:layout_constraintBottom_toBottomOf="@+id/password_field_profile"
+                app:layout_constraintEnd_toEndOf="@+id/btn_edit_email_profile"
+                app:layout_constraintStart_toStartOf="@+id/btn_edit_email_profile"
+                app:layout_constraintTop_toTopOf="@+id/password_field_profile"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <EditText
+                android:id="@+id/editText_email_profile"
+                android:layout_width="206dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/email_field_profile"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/email_field_profile"
+                app:layout_constraintTop_toBottomOf="@+id/email_form_profile" />
+
+            <EditText
+                android:id="@+id/editText_pass_pre_profile"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/password_field_profile"
+                app:layout_constraintTop_toBottomOf="@+id/password_form_profile" />
+
+            <EditText
+                android:id="@+id/editText_pass_new1_profile"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                android:visibility="invisible"
+
+                app:layout_constraintEnd_toEndOf="@+id/editText_pass_pre_profile"
+                app:layout_constraintStart_toStartOf="@+id/editText_pass_pre_profile"
+                app:layout_constraintTop_toBottomOf="@+id/editText_pass_pre_profile" />
+
+            <EditText
+                android:id="@+id/editText_pass_new2_profile"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/editText_pass_new1_profile"
+                app:layout_constraintStart_toStartOf="@+id/editText_pass_new1_profile"
+                app:layout_constraintTop_toBottomOf="@+id/editText_pass_new1_profile" />
+
+            <EditText
+                android:id="@+id/editText_email_pass"
+                android:layout_width="206dp"
+                android:layout_height="37dp"
+                android:ems="10"
+                android:hint="mot de passe"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/editText_email_profile"
+                app:layout_constraintStart_toStartOf="@+id/editText_email_profile"
+                app:layout_constraintTop_toBottomOf="@+id/editText_email_profile" />
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_cancel" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_profile"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_username_profile"
+                android:layout_width="125dp"
+                android:visibility="invisible"
+                android:layout_height="37dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/name_field_profile" />
+
+            <EditText
+                android:id="@+id/editText_username_pass_profile"
+                android:layout_width="125dp"
+                android:layout_height="37dp"
+                android:visibility="invisible"
+                android:ems="10"
+                android:textSize="14sp"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editText_username_profile"
+                app:layout_constraintStart_toStartOf="@+id/editText_username_profile"
+                app:layout_constraintTop_toBottomOf="@+id/editText_username_profile" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/save_edit_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.321" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout_new_transport"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".presentation.transport.NewTransportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        >
+
+        <ImageButton
+            android:id="@+id/button_exit_new_transport"
+            android:layout_width="64dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_cancel" />
+        <TextView
+            android:id="@+id/name_trip_new_update_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="64dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:text="Super voyage"
+            android:textCursorDrawable="@color/colorCursorTextView"
+            android:textSize="25dp">
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_new_update_transport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorButtomLineTextView"
+        android:text="Transport"
+        android:textCursorDrawable="@color/colorCursorTextView"
+        android:textSize="18dp">
+
+    </TextView>
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutProgressBarCreateTransport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+
+
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar_form_transport"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/LinearLayoutFormCreateTransport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".presentation.transport.NewTransportActivity">
+        <LinearLayout
+            android:id="@+id/LinearLayout_participants_update_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="10dp"
+            tools:context=".presentation.activities.DetailActivitiesActivity">
+
+            <TextView
+                android:id="@+id/title_participants_update_transport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:text="Participants:"
+                android:textCursorDrawable="@color/colorCursorTextView"
+                android:textSize="18dp">
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_particpants_update_transport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <!--   android:inputType="textCapWords"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/name_form_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/type_spinner_form_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:hint="Type"
+            app:met_primaryColor="@color/colorButtomLineTextView"
+            app:met_floatingLabel="normal" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/departure_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/departure_form_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:inputType="textCapWords"
+                android:hint="Lieu de depart"
+                android:textCursorDrawable="@color/colorCursorTextView"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reach_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <EditText
+                android:id="@+id/reach_form_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Lieu d'arrivé"
+                android:inputType="textCapWords"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_departure_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <EditText
+                android:id="@+id/date_departure_form_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/time_departure_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+        <EditText
+            android:id="@+id/time_departure_form_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:ems="10"
+            android:hint="Heure de départ"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/time_reach_form_transport_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <EditText
+                android:id="@+id/time_reach_form_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Heure d'arrivé"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/join_exit_update_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rejoindre ce Transport"
+
+            >
+
+        </Button>
+        <Button
+            android:id="@+id/btn_create_form_transport"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+
+            android:background="@drawable/btn_create_new_trip"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_marginBottom="20dp"
+            android:text="Créer"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_update_form_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_create_new_trip"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Enregistrer"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

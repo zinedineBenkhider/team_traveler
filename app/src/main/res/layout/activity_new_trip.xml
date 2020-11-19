@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout_new_trip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.trip.NewTripActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutFormTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        tools:context=".presentation.trip.NewTripActivity">
+
+        <ImageButton
+            android:id="@+id/button_back_new_trip"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_cancel" />
+
+
+        <TextView
+            android:id="@+id/title_new_trip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="64dp"
+            android:backgroundTint="@color/colorButtomLineTextView"
+            android:text="@string/new_trip_title"
+            android:textCursorDrawable="@color/colorCursorTextView"
+            android:gravity="center"
+            android:textSize="25dp">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_progress_bar_new_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar_detail_trip"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_form_new_Trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        tools:context=".presentation.trip.NewTripActivity">
+
+
+
+
+        <!--   android:inputType="textCapWords"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_form_trip_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/name_form_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/place_form_trip_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/place_form_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Lieu"
+                android:inputType="textCapWords"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/start_date_form_trip_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText
+                android:id="@+id/start_date_form_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Date début"
+                android:textCursorDrawable="@color/colorCursorTextView"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/end_date_form_trip_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <EditText
+                android:id="@+id/end_date_form_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButtomLineTextView"
+                android:ems="10"
+                android:hint="Date fin"
+                android:textCursorDrawable="@color/colorCursorTextView" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Site pour créer des boutons:  https://angrytools.com/android/button/-->
+        <Button
+            android:id="@+id/btn_create_form_trip"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+
+            android:background="@drawable/btn_create_new_trip"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Créer"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_update_form_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+
+            android:background="@drawable/btn_create_new_trip"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Enregistrer"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
